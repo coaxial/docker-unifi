@@ -25,7 +25,8 @@ services:
     environment:
       # must match the setting at
       # https://localhost:8443/manage/site/default/settings/backup
-      BACKUP_PERIODICITY: "0 0 1 * *"
+      # adding 15 minutes to make sure the file has been fully generated
+      BACKUP_PERIODICITY: "15 0 1 * *"
     volumes:
       - config:/source:ro
       - tarsnap_cache:/usr/local/tarsnap-cache
