@@ -1,5 +1,7 @@
 # docker-unifi
 
+[![Build Status](https://travis-ci.org/coaxial/docker-unifi.svg?branch=master)](https://travis-ci.org/coaxial/docker-unifi)
+
 Unifi controller in a docker container
 
 ## Usage

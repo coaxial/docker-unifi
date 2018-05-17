@@ -1,0 +1,11 @@
+---
+jobs:
+  include:
+    - stage: test
+      services:
+        - docker
+      install:
+        - docker-compose up -d
+      script:
+        - sleep 20
+        - curl -sfkL https://localhost:8443 | grep -q "UniFi Wizard"
