@@ -8,4 +8,5 @@ jobs:
         - docker-compose up -d
       script:
         - sleep 20
-        - curl -o /dev/null -sfkL https://localhost:8443 | grep -q "UniFi"
+        - curl -kL https://localhost:8443
+        - curl -sfkL https://localhost:8443 | grep -q "UniFi"
